@@ -32,28 +32,28 @@
                                 <rect key="frame" x="0.0" y="328" width="414" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="102" id="4gP-XE-EN6">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCategoryTableViewCell" rowHeight="72" id="4gP-XE-EN6" customClass="BasicCategoryTableViewCell" customModule="toDoTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4gP-XE-EN6" id="ddl-cq-n40">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYx-7g-nDO">
-                                                    <rect key="frame" x="80" y="20" width="254" height="62"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="tQu-Qs-rsO"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="80" y="10" width="254" height="52"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uYx-7g-nDO" firstAttribute="leading" secondItem="ddl-cq-n40" secondAttribute="leading" constant="80" id="193-kj-hL0"/>
-                                                <constraint firstAttribute="bottom" secondItem="uYx-7g-nDO" secondAttribute="bottom" constant="20" id="IWv-42-H4C"/>
-                                                <constraint firstItem="uYx-7g-nDO" firstAttribute="top" secondItem="ddl-cq-n40" secondAttribute="top" constant="20" id="l0C-8v-TnU"/>
+                                                <constraint firstItem="uYx-7g-nDO" firstAttribute="top" secondItem="ddl-cq-n40" secondAttribute="top" constant="10" id="JrY-b9-Ayl"/>
                                                 <constraint firstAttribute="trailing" secondItem="uYx-7g-nDO" secondAttribute="trailing" constant="80" id="nBF-b8-FLl"/>
+                                                <constraint firstAttribute="bottom" secondItem="uYx-7g-nDO" secondAttribute="bottom" constant="10" id="t4y-t4-lSZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstScreenCategoryButton" destination="uYx-7g-nDO" id="VyQ-WA-ron"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -101,6 +101,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstScreenBasicCategoryTableView" destination="0q8-Ah-75l" id="H5B-7V-nBz"/>
                         <outlet property="firstScreenDecisionButton" destination="GWl-Nx-r0f" id="VKc-3m-75J"/>
                         <outlet property="firstScreenImageView" destination="hP1-wV-vxj" id="302-DK-2hd"/>
                         <outlet property="firstScreenImageViewRight" destination="T0b-pT-In6" id="Pj1-hu-TuT"/>
