@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
 //Connect each items for design
     @IBOutlet weak var firstScreenImageView: UIImageView!
-    @IBOutlet weak var firstScreenLabel: UILabel!
     @IBOutlet weak var firstScreenImageViewRight: UIImageView!
-    @IBOutlet weak var firstScreenInstructionLabel: UILabel!
     @IBOutlet weak var firstScreenDecisionButton: UIButton!
     @IBOutlet weak var firstScreenBasicCategoryTableView: UITableView!
     
@@ -48,23 +47,76 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 60
     }
     
+    lazy var welcomeLabel: UILabel = {
+        let firstScreenLabel = UILabel()
+        firstScreenLabel.font = UIFont(name: "Gill Sans", size: 22)
+        firstScreenLabel.text = "Hello"
+        firstScreenLabel.textAlignment = .center
+        firstScreenLabel.textColor = .black
+
+        return firstScreenLabel
+    }()
+    
+    lazy var instructionLabel: UILabel = {
+        let firstScreenInstructionLabel = UILabel()
+        firstScreenInstructionLabel.font = UIFont(name: "Gill Sans", size: 22)
+        firstScreenInstructionLabel.numberOfLines = 0
+        firstScreenInstructionLabel.lineBreakMode = .byWordWrapping
+        firstScreenInstructionLabel.text = "Choose uo to 5 lists. You can change them and add more later."
+        firstScreenInstructionLabel.textAlignment = .center
+        firstScreenInstructionLabel.textColor = .darkGray
+        
+       
+        return firstScreenInstructionLabel
+    }()
+    
+    lazy var categoryTableView: UITableView = {
+        let firstScreenBasicCategoryTableView = UITableView()
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return basicCategoryArray.count
+        }
+        
+        return firstScreenBasicCategoryTableView
+    }()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let firstScreenImageView = UIImageView(frame: CGRect(x: 40, y: 100, width: 50, height: 50))
-        view.addSubview(firstScreenImageView)
         
-        
-        let firstScreenLabel = UILabel(frame: CGRect(x: 45, y: 100, width: 50, height: 40))
-            firstScreenLabel.text = "Hello"
-            firstScreenLabel.textAlignment = .center
-            firstScreenLabel.textColor = .black
-            firstScreenLabel.adjustsFontSizeToFitWidth = true
-            firstScreenLabel.font = UIFont(name: "Gill Sans", size: 35)
-        view.addSubview(firstScreenLabel)
-        
-        
+        //Welcome Label Design
+            self.view.addSubview(welcomeLabel)
+            welcomeLabel.backgroundColor = .red
+            welcomeLabel.snp.makeConstraints { (make) -> Void in
+                make.width.height.equalTo(50)
+                make.topMargin.equalTo(150)
+                make.centerX.equalTo(self.view)
+            
+       //instruction Label Design
+            self.view.addSubview(instructionLabel)
+            instructionLabel.backgroundColor = .red
+            instructionLabel.snp.makeConstraints { (make) -> Void in
+                make.width.equalTo(300)
+                make.top.equalTo(welcomeLabel).offset(100)
+                make.centerX.equalTo(self.view)
+                
+            }
+       //Category TableView Design
+            self.categoryTableView.delegate = self
+            self.categoryTableView.dataSource = self
+            self.categoryTableView.register(UITableViewCell.self, forCellReuseIdentifier: "BasicCategoryTableViewCell")
+            self.view.addSubview(self.categoryTableView)
+            categoryTableView.backgroundColor = .blue
+            categoryTableView.snp.makeConstraints{ (make) -> Void in
+                make.top.equalTo(instructionLabel).offset(100)
+                make.centerX.equalTo(self.view)
+                make.width.equalTo(self.view)
+            }
+        }
     }
+}
     
     
 //    override func viewDidLoad() {
@@ -108,5 +160,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    }
 
 
-}
+
+
 
