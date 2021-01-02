@@ -48,46 +48,64 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 60
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        let firstScreenImageView = UIImageView(frame: CGRect(x: 40, y: 100, width: 50, height: 50))
+        view.addSubview(firstScreenImageView)
         
-    //Dark mode correspondence
-        overrideUserInterfaceStyle = .light        
         
-    //Center Label Design
-        firstScreenLabel.text = "Hello"
-        firstScreenLabel.textAlignment = .center
-        firstScreenLabel.textColor = .black
-        firstScreenLabel.adjustsFontSizeToFitWidth = true
-        firstScreenLabel.font = UIFont(name: "Gill Sans", size: 35)
-        
-    //Instruction Label Design
-        firstScreenInstructionLabel.numberOfLines = 0
-        firstScreenInstructionLabel.lineBreakMode = .byWordWrapping
-        firstScreenInstructionLabel.text = "Choose uo to 5 lists. You can change them and add more later."
-        firstScreenInstructionLabel.textAlignment = .center
-        firstScreenInstructionLabel.font = UIFont(name: "Gill Sans", size: 22)
-        firstScreenInstructionLabel.textColor = .darkGray
-        
-    //Decision Button Design
-        firstScreenDecisionButton.setTitle("Done", for: .normal)
-        firstScreenDecisionButton.backgroundColor = .black
-        firstScreenDecisionButton.setTitleColor(.white, for: .normal)
-        firstScreenDecisionButton.layer.cornerRadius = 10
-        firstScreenDecisionButton.layer.borderWidth = 1
-        firstScreenDecisionButton.layer.borderColor = UIColor.black.cgColor
-        firstScreenDecisionButton.clipsToBounds = true
-        firstScreenDecisionButton.titleLabel?.font = UIFont(name: "Gill Sans", size: 22)
-        firstScreenDecisionButton.frame.size.height = 40
-        
-        firstScreenBasicCategoryTableView.delegate = self
-        firstScreenBasicCategoryTableView.dataSource = self
-        firstScreenBasicCategoryTableView.separatorStyle = .none
+        let firstScreenLabel = UILabel(frame: CGRect(x: 45, y: 100, width: 50, height: 40))
+            firstScreenLabel.text = "Hello"
+            firstScreenLabel.textAlignment = .center
+            firstScreenLabel.textColor = .black
+            firstScreenLabel.adjustsFontSizeToFitWidth = true
+            firstScreenLabel.font = UIFont(name: "Gill Sans", size: 35)
+        view.addSubview(firstScreenLabel)
         
         
     }
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view.
+//
+//    //Dark mode correspondence
+//        overrideUserInterfaceStyle = .light
+//
+//    //Center Label Design
+//        firstScreenLabel.text = "Hello"
+//        firstScreenLabel.textAlignment = .center
+//        firstScreenLabel.textColor = .black
+//        firstScreenLabel.adjustsFontSizeToFitWidth = true
+//        firstScreenLabel.font = UIFont(name: "Gill Sans", size: 35)
+//
+//    //Instruction Label Design
+//        firstScreenInstructionLabel.numberOfLines = 0
+//        firstScreenInstructionLabel.lineBreakMode = .byWordWrapping
+//        firstScreenInstructionLabel.text = "Choose uo to 5 lists. You can change them and add more later."
+//        firstScreenInstructionLabel.textAlignment = .center
+//        firstScreenInstructionLabel.font = UIFont(name: "Gill Sans", size: 22)
+//        firstScreenInstructionLabel.textColor = .darkGray
+//
+//    //Decision Button Design
+//        firstScreenDecisionButton.setTitle("Done", for: .normal)
+//        firstScreenDecisionButton.backgroundColor = .black
+//        firstScreenDecisionButton.setTitleColor(.white, for: .normal)
+//        firstScreenDecisionButton.layer.cornerRadius = 10
+//        firstScreenDecisionButton.layer.borderWidth = 1
+//        firstScreenDecisionButton.layer.borderColor = UIColor.black.cgColor
+//        firstScreenDecisionButton.clipsToBounds = true
+//        firstScreenDecisionButton.titleLabel?.font = UIFont(name: "Gill Sans", size: 22)
+//        firstScreenDecisionButton.frame.size.height = 40
+//
+//        firstScreenBasicCategoryTableView.delegate = self
+//        firstScreenBasicCategoryTableView.dataSource = self
+//        firstScreenBasicCategoryTableView.separatorStyle = .none
+//
+//
+//    }
 
 
 }

@@ -14,6 +14,7 @@
 		11571540259EC02D00BDDF08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1157153F259EC02D00BDDF08 /* Assets.xcassets */; };
 		11571543259EC02D00BDDF08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11571541259EC02D00BDDF08 /* LaunchScreen.storyboard */; };
 		1157155C259F15B500BDDF08 /* BasicCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1157155B259F15B500BDDF08 /* BasicCategoryTableViewCell.swift */; };
+		11840F0F25A07F69003A2F23 /* BasicScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11840F0E25A07F69003A2F23 /* BasicScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		11571542259EC02D00BDDF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11571544259EC02D00BDDF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1157155B259F15B500BDDF08 /* BasicCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		11840F0E25A07F69003A2F23 /* BasicScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				11571536259EC02D00BDDF08 /* AppDelegate.swift */,
 				11571538259EC02D00BDDF08 /* SceneDelegate.swift */,
+				11840F0E25A07F69003A2F23 /* BasicScreenViewController.swift */,
 				1157153A259EC02D00BDDF08 /* ViewController.swift */,
 				1157153C259EC02D00BDDF08 /* Main.storyboard */,
 				1157155B259F15B500BDDF08 /* BasicCategoryTableViewCell.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				1157155C259F15B500BDDF08 /* BasicCategoryTableViewCell.swift in Sources */,
 				1157153B259EC02D00BDDF08 /* ViewController.swift in Sources */,
+				11840F0F25A07F69003A2F23 /* BasicScreenViewController.swift in Sources */,
 				11571537259EC02D00BDDF08 /* AppDelegate.swift in Sources */,
 				11571539259EC02D00BDDF08 /* SceneDelegate.swift in Sources */,
 			);
