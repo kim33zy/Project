@@ -62,6 +62,7 @@ class firstScreenViewController: UIViewController, UITableViewDelegate, UITableV
         decisionButton.layer.cornerRadius = 10
         decisionButton.layer.masksToBounds = true
         decisionButton.titleLabel?.font = UIFont(name: "Gill Sans", size: 22)
+        decisionButton.addTarget(self, action: #selector(openBasicScreen), for: .touchUpInside)
         return decisionButton
     }()
     
@@ -147,6 +148,12 @@ class firstScreenViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = categoryTable.dequeueReusableCell(withIdentifier: CategoryCell.categoryCell, for: indexPath) as! CategoryCell
         cell.basicCategoryLabel.text = categoryListArray[indexPath.row]
         return cell
+    }
+    
+    @objc func openBasicScreen() {
+        let basicScreen = BasicScreenViewController()
+        basicScreen.modalPresentationStyle = .fullScreen
+        present(basicScreen, animated: false, completion: nil)
     }
     
 }
